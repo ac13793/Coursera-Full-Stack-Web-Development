@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="Post">
+  <fieldset>
+    <legend>Your Face</legend>
+    <label for="avatar">Your Image:</label><input id="avatar" type="file" name="userImage" accept="image/*" required></br>
+    <label for="preview">Image preview:</label> <img src="" id="preview" />
+  </fieldset>
+
+  <fieldset>
+    <legend>Your General Details</legend>
+    <label for="userName">Name:</label> <input id="userName" type="text" name="userName" placeholder="Your full name" required /></br>
+    <label for="userGender">Gender:</label> <input type="radio" class="userGender" name="userGender" value="Male" required />Male
+                                            <input type="radio" class="userGender" name="userGender" value="Female" required/>Female</br>
+    <label for="userAge">Age:</label> <input id="userAge" type="number" name="userAge" min="1" value="18" required /></br>
+    <label for="userDOB">Date of birth:</label> <input id="userDOB" type="Date" name="userDOB"/></br>
+    <label for="userColor">Favourite color:</label> <input id="userColor" type="color" name="userColor"></br>
+    <label for="userCountry">Which country:</label> <select id="userCountry" name="userCountry">
+      <option value="noselection">no selection</option>
+      <option value="India">India</option>
+      <option value="US">US</option>
+      <option value="UK">UK</option>
+      <option value="Canada">Canada</option>
+      <option value="France">France</option>
+    </select>
+  </fieldset>
+  <fieldset>
+      <legend>Your Indicators</legend>
+      <label for="heightRange">Height:</label> Short<input id="heightRange" type="range" name="heightRange" min="0" max="100">Tall<br>
+      <label for="userSalary">Salary:</label> Poor<input id="userSalary" type="range" name="userSalary" min="0" max="100">Rich
+  </fieldset>
+  <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="userEmail">Email:</label> <input id="userEmail" type="Email" name="userEmail" required><br>
+      <label for="userPhone">Mobile:</label> <input id="userPhone" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" /><br>
+      <label for="userAddress"></label> <textarea id="userAddress" rows="3" cols="20"></textarea><br>
+      <label for="contactMethod">Method to contact you: </label>
+        <input class="" ="contactMethod" type="checkbox" name="email" value="Email">Email
+        <input class="" ="contactMethod" type="checkbox" name="Whatsapp" value="Whatsapp">Whatsapp
+        <input class="" ="contactMethod" type="checkbox" name="In-appchat" value="In-app chat">In-app chat<br>
+  </fieldset>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
