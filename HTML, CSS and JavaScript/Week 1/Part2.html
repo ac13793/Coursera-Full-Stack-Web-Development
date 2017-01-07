@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <style>
+    fieldset{
+      background-color: lightyellow;
+      width: 720px;
+      border: 10px solid yellow;
+      margin-bottom: 10px;
+    }
+    label{
+      width: 180px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: right;
+    }
+    .rangeText{
+      text-align: center;
+    }
+    #userAddress{
+      width: 360px;
+      height: 50px;
+    }
+  </style>
+</head>
 <body>
 <h1>Please Enter Your Details For Our Dating Website!</h1>
 <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="Post">
@@ -12,8 +35,9 @@
   <fieldset>
     <legend>Your General Details</legend>
     <label for="userName">Name:</label> <input id="userName" type="text" name="userName" placeholder="Your full name" required /></br>
-    <label for="userGender">Gender:</label> <input type="radio" class="userGender" name="userGender" value="Male" required />Male
-                                            <input type="radio" class="userGender" name="userGender" value="Female" required/>Female</br>
+    <label for="userGender" class="checkBoxRadioLabel">Gender:</label> 
+    <input type="radio" class="userGender" name="userGender" value="Male" required />Male
+    <input type="radio" class="userGender" name="userGender" value="Female" required/>Female</br>
     <label for="userAge">Age:</label> <input id="userAge" type="number" name="userAge" min="1" value="18" required /></br>
     <label for="userDOB">Date of birth:</label> <input id="userDOB" type="Date" name="userDOB"/></br>
     <label for="userColor">Favourite color:</label> <input id="userColor" type="color" name="userColor"></br>
@@ -28,15 +52,15 @@
   </fieldset>
   <fieldset>
       <legend>Your Indicators</legend>
-      <label for="heightRange">Height:</label> Short<input id="heightRange" type="range" name="heightRange" min="0" max="100">Tall<br>
-      <label for="userSalary">Salary:</label> Poor<input id="userSalary" type="range" name="userSalary" min="0" max="100">Rich
+      <label for="heightRange">Height:</label> <span class="rangeText">Short</span><input id="heightRange" type="range" name="heightRange" min="0" max="100"><span class="rangeText">Tall</span><br>
+      <label for="userSalary">Salary:</label> <span class="rangeText">Poor</span><input id="userSalary" type="range" name="userSalary" min="0" max="100"><span class="rangeText">Rich</span>
   </fieldset>
   <fieldset>
       <legend>Your Contact Information</legend>
       <label for="userEmail">Email:</label> <input id="userEmail" type="Email" name="userEmail" required><br>
       <label for="userPhone">Mobile:</label> <input id="userPhone" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" /><br>
-      <label for="userAddress"></label> <textarea id="userAddress" rows="3" cols="20"></textarea><br>
-      <label for="contactMethod">Method to contact you: </label>
+      <label for="userAddress">Address:</label> <textarea id="userAddress" rows="3" cols="20"></textarea><br>
+      <label for="contactMethod" class="checkBoxRadioLabel">Method to contact you: </label>
         <input class="" ="contactMethod" type="checkbox" name="email" value="Email">Email
         <input class="" ="contactMethod" type="checkbox" name="Whatsapp" value="Whatsapp">Whatsapp
         <input class="" ="contactMethod" type="checkbox" name="In-appchat" value="In-app chat">In-app chat<br>
