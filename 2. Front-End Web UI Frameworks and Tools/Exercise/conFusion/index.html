@@ -49,17 +49,43 @@
                     </li>
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i>Contact</a></li>
                 </ul>
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email">
-                        <input type="password" class="form-control" placeholder="Password">
-                        <input type="checkbox" class="form-control" id="rememberMe" /> <span style="color:#fff">Remember me</span>
-                    </div>
-                    <button type="submit" class="btn btn-info">Sign in</button>
-                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="modal" data-target="#loginModal">
+                            <span class="glyphicon glyphicon-log-in"></span> Login
+                        </a>
+                    </li>
+                </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="checkbox" class="form-control" id="rememberMe" /> <span>Remember me</span>
+                        </div>
+                        <button type="submit" class="btn btn-info">Sign in</button>
+                        <button type="button" class="btn btn-default btn-sm"
+                                data-dismiss="modal">
+                            Cancel
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <header class="jumbotron">
         <!-- Main component for a primary marketing message or call to action -->
@@ -76,8 +102,9 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:20px;"></p>
-                    <a class="btn btn-warning btn-block" href="#reserveTableForm">Reserve Table</a>
-                </div>
+                    <a type="button" class="btn btn-warning btn-block" data-toggle="tooltip" title="Or Call us at +852 12345678"
+                       data-placement="bottom" href="#reserveTableForm">Reserve Table</a>
+</div>
             </div>
         </div>
     </header>
@@ -246,5 +273,10 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
 </body>
 </html>
