@@ -1,14 +1,13 @@
 ﻿<!DOCTYPE html>
-<!-- saved from url=(0077)https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html -->
 <html lang="en" class="gr__d396qusza40orc_cloudfront_net">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ristorante Con Fusion</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
@@ -129,7 +128,7 @@
                                 <label class="btn btn-danger">
                                     <input type="radio" name="section" id="smoking" autocomplete="off">Smoking
                                 </label>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="lastname" class="col-xs-2 control-label">Date and Time</label>
@@ -236,6 +235,14 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause" aria-hidden="true"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play" aria-hidden="true"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -352,7 +359,18 @@
             </div>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#mycarousel").carousel({ interval: 2000 });
+            $("#carousel-pause").click(function () {
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function () {
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
 </body>
 </html>

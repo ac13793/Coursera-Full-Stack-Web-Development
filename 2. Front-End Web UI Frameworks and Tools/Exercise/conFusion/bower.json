@@ -1,0 +1,27 @@
+{
+  "name": "conFusion",
+  "homepage": "https://github.com/ac13793/Coursera-Full-Stack-Web-Development",
+  "description": "Course Front-End Web UI Frameworks and Tools project",
+  "main": "index.html",
+  "keywords": [
+    "conFusion",
+    "Fusion",
+    "Restaurant"
+  ],
+  "authors": [
+    "Ankit Chaurasia"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
