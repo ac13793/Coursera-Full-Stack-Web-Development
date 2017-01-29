@@ -1,0 +1,17 @@
+# Link of Coursera Grunt exercise
+https://www.coursera.org/learn/angular-js/supplement/63KTw/exercise-instructions-web-tools-grunt
+
+# Install Grunt command line interface
+npm install -g grunt-cli
+
+# Install Grunt locally in project. Make sure you have installed Grunt and configured package.json file
+npm install grunt --save-dev
+# After this node_modules folder will be created in the current folder and Grunt entry will be added in package.json file
+
+# Create a file named Gruntfile.js
+
+# Configure JSHint module
+npm install grunt-contrib-jshint --save-dev
+npm install jshint-stylish --save-dev
+npm install time-grunt --save-dev
+npm install jit-grunt --save-dev
