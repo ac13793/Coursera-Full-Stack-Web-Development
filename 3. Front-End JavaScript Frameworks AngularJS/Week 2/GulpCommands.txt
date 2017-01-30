@@ -1,0 +1,13 @@
+# Link of Coursera Gulp exercise
+https://www.coursera.org/learn/angular-js/supplement/N73pl/exercise-instructions-web-tools-gulp
+
+# Install Gulp globally
+npm install -g gulp
+
+# Install Grunt locally in project. Make sure you have installed Grunt and configured package.json file
+ npm install gulp --save-dev
+# After this node_modules folder will be created in the current folder and Grunt entry will be added in package.json file
+
+#Install Gulp Plugins
+#Install all the Gulp plugins that you will need for this exercise. To do this, type the following at the command prompt:
+npm install jshint gulp-jshint jshint-stylish gulp-imagemin gulp-concat gulp-uglify gulp-minify-css gulp-usemin gulp-cache gulp-changed gulp-rev gulp-rename gulp-notify  browser-sync del --save-dev
