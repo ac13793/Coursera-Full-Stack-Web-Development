@@ -17,5 +17,5 @@ angular.module('confusionApp', ['ngRoute']).config(function ($routeProvider) {
             templateUrl: 'dishdetail.html',
             controller: 'DishDetailController'
         })
-        .otherwise('/contactus');
+        .otherwise('/');
 });
