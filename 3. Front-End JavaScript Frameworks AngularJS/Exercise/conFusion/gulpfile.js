@@ -61,9 +61,7 @@ gulp.task('copyfonts', ['clean'], function () {
 });
 
 gulp.task('copytemplates', ['clean'], function () {
-    gulp.src('app/menu.html').pipe(gulp.dest('./dist/'));
-    gulp.src('app/dishdetail.html').pipe(gulp.dest('./dist/'));
-    gulp.src('app/contactus.html').pipe(gulp.dest('./dist/'));
+    gulp.src('app/views/**/*.html').pipe(gulp.dest('./dist/views/'));
 });
 
 // Watch
