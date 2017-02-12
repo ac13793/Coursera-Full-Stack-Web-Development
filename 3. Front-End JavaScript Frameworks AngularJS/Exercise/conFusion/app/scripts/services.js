@@ -42,7 +42,6 @@ angular.module('confusionApp')
             // Remember this is a factory not a service
 
             feedfac.getFeedback = function () {
-                //return $resource(baseURL + "feedback/:id", null, { 'post': { method: 'POST' } });
                 return $resource(baseURL + 'feedback/:id');
             };
 

@@ -72,9 +72,6 @@ angular.module('confusionApp')
                     $scope.invalidChannelSelection = false;
 
                     console.log($scope.feedback);
-                    //$scope.feedback.push($scope.feedback);
-
-                    //feedbackFactory.getFeedback().post({ id: $scope.feedback.id }, $scope.feedback);
                     feedbackFactory.getFeedback().save({ id: $scope.feedback.id }, $scope.feedback);
                     $scope.feedbackForm.$setPristine();
                     $scope.feedback = { mychannel: "", firstName: "", lastName: "", agree: false, email: "" };
