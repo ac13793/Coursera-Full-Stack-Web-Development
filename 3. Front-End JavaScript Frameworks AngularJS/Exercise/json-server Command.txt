@@ -1,0 +1,17 @@
+# Link of Coursera json-server exercise
+https://www.coursera.org/learn/angular-js/supplement/ttSa6/exercise-instructions-setting-up-a-server-using-json-server
+
+#Download db.json file
+
+#Installing json-server
+#json-server is a node module, and hence can be installed globally by typing the following at the command prompt:
+
+npm install json-server -g
+
+Configuring Server Folder
+
+At any convenient location on your computer, create a new folder named json-server, and move to this folder.
+Download the db.json file provided above to this folder.
+Move to this folder in your terminal window, and type the following at the command prompt to start the server:
+
+json-server --watch db.json

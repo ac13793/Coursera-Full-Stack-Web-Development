@@ -210,6 +210,18 @@
     }
   ],
   "feedback": [
-
+    {
+      "mychannel": "tel",
+      "firstName": "Ankit",
+      "lastName": "Chaurasia",
+      "agree": true,
+      "email": "ac13793@outlook.com",
+      "tel": {
+        "areaCode": "425",
+        "number": "1234567890"
+      },
+      "comments": "This is sample feedback",
+      "id": 1
+    }
   ]
 }
