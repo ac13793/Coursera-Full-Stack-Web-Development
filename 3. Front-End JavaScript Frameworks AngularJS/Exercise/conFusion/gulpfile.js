@@ -50,7 +50,7 @@ gulp.task('imagemin', function () {
     return del(['dist/images']), gulp.src('app/images/**/*')
       .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
       .pipe(gulp.dest('dist/images'));
-      //.pipe(notify({ message: 'Images task complete' }));
+    //.pipe(notify({ message: 'Images task complete' }));
 });
 
 gulp.task('copyfonts', ['clean'], function () {
