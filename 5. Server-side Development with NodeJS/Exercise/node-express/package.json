@@ -4,6 +4,7 @@
   "description": "Coursera Course5",
   "main": "rectangle-1.js",
   "dependencies": {
+    "body-parser": "^1.17.0",
     "express": "^4.15.0",
     "morgan": "^1.8.1"
   },
