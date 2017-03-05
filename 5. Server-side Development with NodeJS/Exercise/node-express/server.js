@@ -1,49 +1,24 @@
-'use strict';
-
 var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
+
+var dishRouter = require('./dishRouter');
+var promoRouter = require('./promoRouter');
+var leaderRouter = require('./leaderRouter');
 
 var hostname = 'localhost';
 var port = 3000;
 
 var app = express();
-//morgan
+
 app.use(morgan('dev'));
 
-//Prepare dish CRUD operation
-var opDish = require('./dishRouter');
-opDish(express.Router(), bodyParser, function (err, dishRouter) {
-    if (err) {
-        console.log(err);
-    } else {
-        dishRouter.init(app, '/dishes');
-    }
-});
+app.use('/dishes',dishRouter);
+app.use('/promotions',promoRouter);
+app.use('/leadership',leaderRouter);
 
-//Prepare promo CRUD operation
-var opPromo = require('./promoRouter');
-opPromo(express.Router(), bodyParser, function (err, promoRouter) {
-    if (err) {
-        console.log(err);
-    } else {
-        promoRouter.init(app, '/promotions');
-    }
-});
-
-//Prepare leader CRUD operation
-var opLeader = require('./leaderRouter');
-opLeader(express.Router(), bodyParser, function (err, leaderRouter) {
-    if (err) {
-        console.log(err);
-    } else {
-        leaderRouter.init(app, '/leadership');
-    }
-});
-
-//static files
 app.use(express.static(__dirname + '/public'));
 
-app.listen(port, hostname, function () {
-    console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, hostname, function(){
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
